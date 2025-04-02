@@ -1,0 +1,170 @@
+// Flex between the h1 and the nav bar
+header {
+    @include flex-spaceBetween;
+    color: $text-color;
+    background-color: $background-color2;
+    padding: 1rem;
+
+    h1 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-left: 2rem;
+    }
+
+    @media (max-width: $tablet) {
+        h1 {
+            display: none;
+        }
+    }
+
+    #top-nav {
+        display: flex; 
+        align-items: center; 
+    }
+
+    // Language selection container styles
+    .language-change {
+        float: right;
+        margin-top: 10px;
+        
+
+        label {
+            font-size: 10px;
+            font-weight: 600;
+            color: #444;
+            margin-right: 10px;
+        }
+
+        #language-select {
+            padding: 2px 10px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            background-color: #fff;
+            color: #333;
+            appearance: none;
+            cursor: pointer;
+            transition: border 0.3s ease, background-color 0.3s ease;
+
+            &:hover {
+                border-color: #555;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: #0077ff;
+                background-color: #f0f8ff;
+            }
+        }
+    }
+
+    @media (max-width: $tablet) {
+        .dropbtn {
+            background-color: $background-color2;
+            color: black;
+            width: 60px;
+            padding: 10px;
+            font-size: 24px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: $background-color2;
+            min-width: 100px;
+            z-index: 1;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 12px;
+            text-decoration: none;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: $primary-color;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3E5879;
+        }
+
+        // Responsive adjustments for language select box on tablet or smaller screens
+        .language-change {
+            float: none;
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+
+            label {
+                font-size: 14px;
+                margin-right: 0;
+            }
+
+            #language-select {
+                padding: 8px 15px;
+                font-size: 14px;
+                width: 80%; // Make the select box fill the available space
+            }
+        }
+    }
+
+    @media (min-width: $desktop-min) {
+        .dropdown-content {
+            text-align: center;
+            display: flex;
+        }
+
+        .dropbtn {
+            display: none;
+        }
+
+        .dropdown-content a {
+            margin: 5px;
+            padding: 12px;
+            background-color: $background-color;
+            text-decoration: none;
+            color: $text-color;
+            flex: auto;
+            border-radius: 8px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: $background-color2;
+            text-decoration: underline;
+        }
+
+        .language-change {
+            float: right;
+            margin-top: 10px;
+            text-align: right;
+
+            label {
+                font-size: 16px;
+            }
+
+            #language-select {
+                width: auto; // Default width on desktop
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+    }
+}

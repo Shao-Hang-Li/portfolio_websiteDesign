@@ -1,0 +1,34 @@
+@import './resets';
+@import './variables';
+@import './mixins';
+@import './header';
+@import './footer';
+@import './aboutMe';
+@import './projects';
+@import './blogs';
+@import './contact';
+@import './onlineStoreFront';
+@import './feedback';
+
+// HTML (Scroll issue with low resolution)
+html {
+    height: 100%;
+    overflow-y: auto;
+}
+
+// Body styles
+body {
+    // scroll  issue with low resolution fix
+    height: 100%;
+    overflow-y: auto;
+    // fonts and background
+    font-family: $font-family-default;
+    background-color: $background-color;
+}
+
+// Main styles
+main {
+    padding: 2rem;
+    background-color: $background-color;
+    font-family: $font-family-default;
+}

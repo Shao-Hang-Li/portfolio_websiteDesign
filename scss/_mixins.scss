@@ -1,0 +1,19 @@
+// Flex Display 
+@mixin flex-spaceBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Grid Display
+@mixin grid-display{
+    display: grid;
+    gap: 1rem;
+}
+
+// Image size
+@mixin imageSizing {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}

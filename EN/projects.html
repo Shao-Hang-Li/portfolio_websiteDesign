@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A personal portfolio website">
+    <meta name="author" content="Shao Hang Li">
+    <meta name="keywords" content="HTML, CSS, JavaScript, metadata, personal portfolio, Shao Hang Li" >
+    <link rel="stylesheet" href="../dist/css/main.css">
+    <link rel="icon" href="../Images/icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src='../JS/feedback.js' defer></script>
+    <title>Shao Hang Li's Portfolio</title>
+</head>
+<body>
+    <!-- Header section -->
+    <header class="personalHeader">   
+        <img src="../Images/logo.png" alt="Logo" width="100" height="100">
+        <h1>Shao Hang Li / Full Stack Developer</h1>    
+        <!-- navigation section inside header since it's a part of the header (side by side) -->
+        <nav id="top-nav">
+            <div class="dropdown">
+                <button class="dropbtn">&#9776;</button>
+                <div class="dropdown-content">
+                    <a href="aboutMe.html">About Me</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="blogs.html">Blog</a>
+                    <a href="contactForm.html">Contact</a>
+                </div>
+            </div>
+            <div class = language-change>
+                <label for="language-select">Language</label>
+                <select id="language-select" onchange="window.location.href=this.value">
+                  <option value="../EN/projects.html" selected>English</option>
+                  <option value="../FR/projects.html" >Français</option>
+                </select>
+            </div>
+        </nav>
+        </header>
+    <!-- Main section -->
+    <main class="allMain">
+        <!-- Projects section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <p id="projectIntro">Explore a collection of projects that I worked on during my academic journey and internships, highlighting my skills, creativity, and problem-solving abilities.</p>
+            <div id="projectFilters">
+                <!-- Filter Form -->
+                <form>
+                    <label for="projectType">Project types:</label>
+                    <select id="projectType" name="projectType">
+                        <option value="all">All Projects</option>
+                        <option value="java">Java</option>
+                        <option value="html">HTML</option>
+                        <option value="sql">SQL</option>
+                    </select>
+                </form>
+            </div>
+
+            <!-- Project List -->
+            <!-- btn is for the buttons and I can customize it with button-wrapper
+             <button><a href="walking.html">Here's Why</a></button> I changed it from that since there are errors with the class examples in html validator
+             The element a must not appear as a descendant of the button element
+             -->
+            <div class="project-wrapper">
+                <article class="projectBubble">
+                    <h3>Medical Clinic System</h3>
+                    <img src="../Images/medicalClinicSystem.jpg" alt="Medical Clinic System project" width="500" height="400">
+                    <p>Designed and implemented a Medical Clinic System in Java to manage data related to doctors, patients, treatments, and other entities.</p>
+                    <div class="button-wrapper">
+                        <a href="medicalClinicSystem.html" class="btn">Read More</a>
+                        <a href="https://github.com/Shao-Hang-Li/MedicalClinicSystemProject" class="btn">View on GitHub</a>
+                    </div>
+                </article>
+                <article class="projectBubble">
+                    <h3>Course Registration System</h3>
+                    <img src="../Images/courseRegistrationSystem.png" alt="Course Registration System project" width="500" height="400">
+                    <p>Designed and implemented a Course Registration System in Java that allows students and teachers to register for courses and manage their schedules.</p>
+                    <div class="button-wrapper">
+                        <a href="courseRegistration.html" class="btn">Read More</a>
+                        <a href="https://github.com/Shao-Hang-Li/CourseRegistrationSystem" class="btn">View on GitHub</a>
+                    </div>
+                </article>
+                <article class="projectBubble">
+                    <h3>Online Store Front</h3>
+                    <img src="../Images/onlineStoreFront.png" alt="Online Store Front project" width="500" height="400">
+                    <p>Designed an online storefront for a TCG store, enabling users to buy and sell cards using HTML and CSS.</p>
+                    <div class="button-wrapper">
+                        <a href="onlineStoreFront.html" class="btn">Read More</a>
+                        <a href="https://github.com/Shao-Hang-Li/onlineStoreFront" class="btn">View on GitHub</a>
+                    </div>
+                </article>
+                <article class="projectBubble">
+                    <h3>MoveInOn</h3>
+                    <img src="../Images/MoveInOn.png" alt="MoveInOn project" width="500" height="400">
+                    <p>Developed a database for a moving company providing moving and storage services in Washington, Oregon, and Wyoming using MySQL and Microsoft SQL Server.</p>
+                    <div class="button-wrapper">
+                        <a href="moveInOn.html" class="btn">Read More</a>
+                        <a href="https://github.com/Shao-Hang-Li/onlineStoreFront" class="btn">View on GitHub</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer section -->
+    <footer class="footer-end">
+        <p>Telephone: 438-488-1118</p>
+        <p>Email: shaohangok@hotmail.com</p>
+        <p>Copyright &copy; 2025 Shao Hang Li. All Rights Reserved.</p>
+        <!-- Bootstrap social media icons -->
+        <div>
+            <a href="https://twitter.com/your-username" aria-label="Twitter Profile">
+                <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://facebook.com/your-username" aria-label="Facebook Profile">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://github.com/your-username" aria-label="GitHub Profile">
+                <i class="bi bi-github"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

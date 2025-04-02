@@ -1,0 +1,24 @@
+.footer-end {
+    font-family: $font-family-default;
+    padding: 1rem;
+    background-color: $background-color;
+    text-align: center;
+
+    p {
+        margin-bottom: 0.1rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    // CSS change the Bootstrap Icon
+    .bi-twitter, .bi-facebook, .bi-github {
+        font-size: 1.8rem; 
+        color: $text-color;   
+        margin-right: 1rem; 
+    }
+
+    .bi-twitter:hover, .bi-facebook:hover, .bi-github:hover {
+        color: $primary-color;
+    }
+}

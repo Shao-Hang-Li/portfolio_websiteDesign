@@ -1,0 +1,105 @@
+#aboutMe {
+    @include grid-display;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    #personal {
+        text-align: center;
+        border-radius: 1rem;
+        
+        // https://getcssscan.com/css-box-shadow-examples (box shadow)
+        box-shadow: $shadow;
+
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 0.85rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        img {
+            margin-top: 1rem;
+        }
+        
+        .btn-cv {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin-bottom: $margin-bottom-default;
+            background-color: $background-color3;
+            color: $text-color2;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+        
+            &:hover {
+                background-color: $secondary-color;
+            }
+        }
+    }
+
+    #biography {
+        h3{
+            font-size: 2rem;
+            margin-bottom: $margin-bottom-default;
+            line-height: 2.8rem;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+
+        #biography {
+            text-align: center;
+        }
+    }
+}
+
+#mission {
+    justify-content: center;
+
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 4rem;
+        margin-bottom: $margin-bottom-default;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #contactMe {
+        text-align: center;
+        margin-bottom: $margin-bottom-default;
+        margin-top: 1rem;
+
+        h3{
+            margin: 1rem;
+        }
+
+        .btn-aboutMe {
+            font-weight: bold;
+            background-color: $background-color3;
+            color: $text-color2;
+            margin-top: 1rem;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+        }
+
+        .btn-aboutMe:hover {
+            background-color: $primary-color;
+        }
+    }
+
+}
+

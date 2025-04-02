@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Un site web personnel de portfolio">
+    <meta name="author" content="Shao Hang Li">
+    <meta name="keywords" content="HTML, CSS, JavaScript, métadonnées, portfolio personnel, Shao Hang Li" >
+    <link rel="stylesheet" href="../dist/css/main.css">
+    <link rel="icon" href="../Images/icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Portfolio de Shao Hang Li</title>
+</head>
+<body>
+    <!-- Header section -->
+    <header class="personalHeader">
+        <img src="../Images/logo.png" alt="Logo" width="100" height="100">   
+        <h1>Shao Hang Li / Développeur Full Stack</h1>    
+        <!-- navigation section inside header since it's a part of the header (side by side) -->
+        <nav id="top-nav">
+            <div class="dropdown">
+                <button class="dropbtn">&#9776;</button>
+                <div class="dropdown-content">
+                    <a href="aboutMe_fr.html">À propos de moi</a>
+                    <a href="projects.html">Projets</a>
+                    <a href="blogs.html">Blog</a>
+                    <a href="contactForm.html">Contact</a>
+                </div>
+            </div>
+            <div class = language-change>
+                <label for="language-select">Language</label>
+                <select id="language-select" onchange="window.location.href=this.value">
+                  <option value="../EN/projects.html" >English</option>
+                  <option value="../FR/projects.html" selected>Français</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+    <!-- Main section -->
+    <main class="allMain">
+        <!-- Projects section -->
+        <section id="projects">
+            <h2>Projets</h2>
+            <p id="projectIntro">Explorez une collection de projets sur lesquels j'ai travaillé pendant mon parcours académique et mes stages, mettant en valeur mes compétences, ma créativité et mes capacités de résolution de problèmes.</p>
+            <div id="projectFilters">
+                <!-- Filter Form -->
+                <form>
+                    <label for="projectType">Types de projets :</label>
+                    <select id="projectType" name="projectType">
+                        <option value="all">Tous les projets</option>
+                        <option value="java">Java</option>
+                        <option value="html">HTML</option>
+                        <option value="sql">SQL</option>
+                    </select>
+                </form>
+            </div>
+
+            <!-- Project List -->
+            <div class="project-wrapper">
+                <article class="projectBubble">
+                    <h3>Système de clinique médicale</h3>
+                    <img src="../Images/medicalClinicSystem.jpg" alt="Projet Système de clinique médicale" width="500" height="400">
+                    <p>Conception et mise en œuvre d'un système de clinique médicale en Java pour gérer les données relatives aux médecins, aux patients, aux traitements et à d'autres entités.</p>
+                    <div class="button-wrapper">
+                        <a href="medicalClinicSystem.html" class="btn">Lire la suite</a>
+                        <a href="https://github.com/Shao-Hang-Li/MedicalClinicSystemProject" class="btn">Voir sur GitHub</a>
+                    </div>
+                </article>
+                <article class="projectBubble">
+                    <h3>Système d'inscription aux cours</h3>
+                    <img src="../Images/courseRegistrationSystem.png" alt="Projet Système d'inscription aux cours" width="500" height="400">
+                    <p>Conception et mise en œuvre d'un système d'inscription aux cours en Java permettant aux étudiants et aux enseignants de s'inscrire aux cours et de gérer leurs emplois du temps.</p>
+                    <div class="button-wrapper">
+                        <a href="courseRegistration.html" class="btn">Lire la suite</a>
+                        <a href="https://github.com/Shao-Hang-Li/CourseRegistrationSystem" class="btn">Voir sur GitHub</a>
+                    </div>
+                </article>
+                <article class="projectBubble">
+                    <h3>Vitrine de magasin en ligne</h3>
+                    <img src="../Images/onlineStoreFront.png" alt="Projet Vitrine de magasin en ligne" width="500" height="400">
+                    <p>Conception d'une vitrine en ligne pour un magasin de cartes à collectionner, permettant aux utilisateurs d'acheter et de vendre des cartes en utilisant HTML et CSS.</p>
+                    <div class="button-wrapper">
+                        <a href="onlineStoreFront.html" class="btn">Lire la suite</a>
+                        <a href="https://github.com/Shao-Hang-Li/onlineStoreFront" class="btn">Voir sur GitHub</a>
+                    </div>
+                </article>
+                <article class="projectBubble">
+                    <h3>MoveInOn</h3>
+                    <img src="../Images/MoveInOn.png" alt="Projet MoveInOn" width="500" height="400">
+                    <p>Développement d'une base de données pour une entreprise de déménagement offrant des services de déménagement et de stockage dans les états de Washington, Oregon et Wyoming en utilisant MySQL et Microsoft SQL Server.</p>
+                    <div class="button-wrapper">
+                        <a href="moveInOn.html" class="btn">Lire la suite</a>
+                        <a href="https://github.com/Shao-Hang-Li/onlineStoreFront" class="btn">Voir sur GitHub</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer section -->
+    <footer class="footer-end">
+        <p>Telephone: 438-488-1118</p>
+        <p>Email: shaohangok@hotmail.com</p>
+        <p>Droits d'auteur &copy; 2025 Shao Hang Li. Tous droits réservés.</p>
+        <!-- Bootstrap social media icons -->
+        <div>
+            <a href="https://twitter.com/your-username" aria-label="Twitter Profile">
+                <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://facebook.com/your-username" aria-label="Facebook Profile">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://github.com/your-username" aria-label="GitHub Profile">
+                <i class="bi bi-github"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
